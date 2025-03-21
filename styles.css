@@ -19,15 +19,19 @@
 
 /* Overlay Content */
 .overlay {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5); /* Light transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
 }
 
+/* Heading */
 .overlay h1 {
     font-size: 2em;
     margin-bottom: 20px;
@@ -36,8 +40,9 @@
 /* Links */
 .links {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .links a {
@@ -47,8 +52,19 @@
     padding: 10px 20px;
     border-radius: 5px;
     transition: 0.3s;
+    font-size: 18px;
 }
 
 .links a:hover {
     background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .overlay {
+        width: 90%;
+    }
+    .links {
+        flex-direction: column;
+    }
 }
