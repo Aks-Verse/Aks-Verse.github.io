@@ -4,23 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aks-Verse</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Tap Screen -->
+    <div id="tap-screen" onclick="startSite()">
+        Tap Anywhere
+    </div>
+
+    <!-- Background Video -->
     <video id="bg-video" autoplay muted loop>
         <source src="assets/background.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
+    <!-- Overlay Content -->
     <div class="overlay">
-        <h1>Tap Anywhere to Start</h1>
-        <div class="links">
-            <a href="https://discord.com" target="_blank">Discord</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-            <a href="introduction.html">Full Introduction</a>
+        <img id="overlay-image" src="assets/overlay-image.png" alt="Overlay">
+        <div class="buttons">
+            <div class="btn-row">
+                <a href="https://discord.com" class="btn discord">Discord</a>
+                <a href="https://instagram.com" class="btn instagram">Instagram</a>
+            </div>
+            <a href="full-introduction.html" class="btn full-intro">Full Introduction</a>
         </div>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+        function startSite() {
+            document.getElementById("tap-screen").style.display = "none";
+            document.querySelector(".overlay").style.display = "flex";
+        }
+    </script>
 
 </body>
 </html>
