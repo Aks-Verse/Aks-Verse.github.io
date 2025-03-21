@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akhil - Verse</title>
+    <title>Aks-Verse</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- BACKGROUND VIDEO -->
+    <video autoplay loop muted id="background-video">
+        <source src="assets/background.mp4" type="video/mp4">
+    </video>
 
-    <!-- Tap Screen Section -->
-    <div id="tap-screen" onclick="startSite()">
-        <p>Tap Anywhere to Enter</p>
-    </div>
+    <!-- OVERLAY IMAGE -->
+    <img src="assets/overlay-image.png" id="overlay" alt="Overlay Image">
 
-    <!-- Main Content (Hidden by Default) -->
-    <div id="main-content">
-        <video autoplay loop muted playsinline id="bg-video">
-            <source src="assets/background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- NAME TEXT -->
+    <h1 class="name">AKHIL</h1>
 
-        <img src="assets/overlay-image.png" alt="Overlay" id="overlay">
-
-        <div class="buttons">
+    <!-- BUTTONS CONTAINER -->
+    <div class="buttons">
+        <!-- Two buttons in one row -->
+        <div class="btn-row">
             <a href="#" class="btn discord">Discord →</a>
             <a href="#" class="btn instagram">Instagram →</a>
-            <a href="#" class="btn full-intro">Full Introduction →</a>
         </div>
+
+        <!-- Full Width Introduction Button -->
+        <a href="#" class="btn full-intro">Full Introduction →</a>
     </div>
 
+    <!-- JAVASCRIPT FILE -->
     <script src="script.js"></script>
 </body>
 </html>
