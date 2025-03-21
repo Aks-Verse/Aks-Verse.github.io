@@ -8,20 +8,25 @@
 </head>
 <body>
 
-    <!-- Background Video -->
-    <video autoplay loop muted playsinline id="bg-video">
-        <source src="assets/background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <!-- Tap Screen Section -->
+    <div id="tap-screen" onclick="startSite()">
+        <p>Tap Anywhere to Enter</p>
+    </div>
 
-    <!-- Overlay Image -->
-    <img src="assets/overlay-image.png" alt="Overlay" id="overlay">
+    <!-- Main Content (Hidden by Default) -->
+    <div id="main-content">
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="assets/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-    <!-- Buttons -->
-    <div class="buttons">
-        <a href="https://discord.com" class="btn discord">Discord →</a>
-        <a href="https://instagram.com" class="btn instagram">Instagram →</a>
-        <a href="#" class="btn full-intro" onclick="startSite()">Full Introduction →</a>
+        <img src="assets/overlay-image.png" alt="Overlay" id="overlay">
+
+        <div class="buttons">
+            <a href="#" class="btn discord">Discord →</a>
+            <a href="#" class="btn instagram">Instagram →</a>
+            <a href="#" class="btn full-intro">Full Introduction →</a>
+        </div>
     </div>
 
     <script src="script.js"></script>
