@@ -8,18 +8,33 @@
 </head>
 <body>
 
-    <!-- Background Video -->
-    <video autoplay muted loop id="bg-video">
-        <source src="your-video.mp4" type="video/mp4">
-    </video>
-
-    <!-- Content -->
-    <div class="container">
-        <h1>AKHIL</h1>
-        <button class="discord-btn">Discord</button>
-        <button class="instagram-btn">Instagram</button>
-        <button class="full-intro-btn">Full Introduction</button>
+    <!-- Tap to Continue Screen -->
+    <div id="tap-screen" onclick="enterSite()">
+        <h1>Tap to Continue</h1>
     </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <h1 class="title">AKHIL</h1>
+        
+        <div class="button-container">
+            <a href="https://discord.com" class="btn discord">
+                <img src="assets/discord-logo.png" alt="Discord"> Discord
+            </a>
+            <a href="https://instagram.com" class="btn instagram">
+                <img src="assets/instagram-logo.png" alt="Instagram"> Instagram
+            </a>
+        </div>
+
+        <a href="#" class="btn full-intro">Full Introduction</a>
+    </div>
+
+    <script>
+        function enterSite() {
+            document.getElementById("tap-screen").style.display = "none";
+            document.getElementById("main-content").classList.remove("hidden");
+        }
+    </script>
 
 </body>
 </html>
