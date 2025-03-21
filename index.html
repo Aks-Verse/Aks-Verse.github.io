@@ -8,36 +8,18 @@
 </head>
 <body>
 
-    <!-- Tap Screen -->
-    <div id="tap-screen" onclick="startSite()">
-        Tap Anywhere
-    </div>
-
     <!-- Background Video -->
-    <video id="bg-video" autoplay muted loop>
-        <source src="assets/background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+    <video autoplay muted loop id="bg-video">
+        <source src="your-video.mp4" type="video/mp4">
     </video>
 
-    <!-- Overlay Content -->
-    <div class="overlay">
-        <img id="overlay-image" src="assets/overlay-image.png" alt="Overlay">
-        <div class="buttons">
-            <div class="btn-row">
-                <a href="https://discord.com" class="btn discord">Discord</a>
-                <a href="https://instagram.com" class="btn instagram">Instagram</a>
-            </div>
-            <a href="full-introduction.html" class="btn full-intro">Full Introduction</a>
-        </div>
+    <!-- Content -->
+    <div class="container">
+        <h1>AKHIL</h1>
+        <button class="discord-btn">Discord</button>
+        <button class="instagram-btn">Instagram</button>
+        <button class="full-intro-btn">Full Introduction</button>
     </div>
-
-    <!-- JavaScript -->
-    <script>
-        function startSite() {
-            document.getElementById("tap-screen").style.display = "none";
-            document.querySelector(".overlay").style.display = "flex";
-        }
-    </script>
 
 </body>
 </html>
