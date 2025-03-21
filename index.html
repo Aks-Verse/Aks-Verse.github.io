@@ -8,15 +8,29 @@
 </head>
 <body>
 
+    <!-- Intro Video -->
+    <div id="intro-screen">
+        <video id="intro-video" autoplay muted>
+            <source src="assets/intro.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <!-- Tap to Continue Screen -->
     <div id="tap-screen" onclick="enterSite()">
         <h1>Tap to Continue</h1>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Page -->
     <div id="main-content" class="hidden">
-        <h1 class="title">AKHIL</h1>
-        
+        <!-- Background Video -->
+        <video id="bg-video" autoplay muted loop>
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+
+        <!-- Overlay Image -->
+        <img id="overlay-image" src="assets/overlay.png" alt="Overlay">
+
+        <!-- Buttons -->
         <div class="button-container">
             <a href="https://discord.com" class="btn discord">
                 <img src="assets/discord-logo.png" alt="Discord"> Discord
@@ -29,12 +43,8 @@
         <a href="#" class="btn full-intro">Full Introduction</a>
     </div>
 
-    <script>
-        function enterSite() {
-            document.getElementById("tap-screen").style.display = "none";
-            document.getElementById("main-content").classList.remove("hidden");
-        }
-    </script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
