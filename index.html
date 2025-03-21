@@ -4,33 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aks-Verse</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- BACKGROUND VIDEO -->
-    <video autoplay loop muted id="background-video">
-        <source src="assets/background.mp4" type="video/mp4">
-    </video>
-
-    <!-- OVERLAY IMAGE -->
-    <img src="assets/overlay-image.png" id="overlay" alt="Overlay Image">
-
-    <!-- NAME TEXT -->
-    <h1 class="name">AKHIL</h1>
-
-    <!-- BUTTONS CONTAINER -->
-    <div class="buttons">
-        <!-- Two buttons in one row -->
-        <div class="btn-row">
-            <a href="#" class="btn discord">Discord →</a>
-            <a href="#" class="btn instagram">Instagram →</a>
+    <div id="tap-screen">Tap Anywhere to Start</div>
+    <video id="bg-video" src="background.mp4" muted loop></video>
+    <div id="main-content">
+        <img id="overlay" src="overlay.png" alt="Overlay Image">
+        <div class="buttons">
+            <div class="btn-row">
+                <a href="https://discord.com" class="btn discord">Discord</a>
+                <a href="https://instagram.com" class="btn instagram">Instagram</a>
+            </div>
+            <a href="full-introduction.html" class="btn full-intro">Full Introduction</a>
         </div>
-
-        <!-- Full Width Introduction Button -->
-        <a href="#" class="btn full-intro">Full Introduction →</a>
     </div>
-
-    <!-- JAVASCRIPT FILE -->
     <script src="script.js"></script>
 </body>
 </html>
