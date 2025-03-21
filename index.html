@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="tap-screen">Tap Anywhere to Start</div>
-    <video id="bg-video" src="background.mp4" muted loop></video>
-    <div id="main-content">
-        <img id="overlay" src="overlay.png" alt="Overlay Image">
-        <div class="buttons">
-            <div class="btn-row">
-                <a href="https://discord.com" class="btn discord">Discord</a>
-                <a href="https://instagram.com" class="btn instagram">Instagram</a>
-            </div>
-            <a href="full-introduction.html" class="btn full-intro">Full Introduction</a>
+
+    <video id="bg-video" autoplay muted loop>
+        <source src="assets/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay">
+        <h1>Tap Anywhere to Start</h1>
+        <div class="links">
+            <a href="https://discord.com" target="_blank">Discord</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="introduction.html">Full Introduction</a>
         </div>
     </div>
-    <script src="script.js"></script>
+
 </body>
 </html>
