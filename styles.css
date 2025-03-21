@@ -7,41 +7,15 @@
 
 /* Full screen background */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     background: black;
     overflow: hidden;
     color: white;
     font-family: Arial, sans-serif;
-    position: relative;
-}
-
-/* Tap Screen */
-#tap-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2;
-}
-
-/* Show Main Content */
-#main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
+    justify-content: center;
 }
 
 /* Background Video */
@@ -52,6 +26,33 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
+}
+
+/* Tap Screen */
+#tap-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Main Content */
+#main-content {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     z-index: 1;
 }
 
@@ -62,7 +63,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* BUTTON CONTAINER: Two buttons in one row */
+/* BUTTON CONTAINER */
 .buttons {
     display: flex;
     flex-direction: column;
@@ -72,7 +73,7 @@ body {
     max-width: 400px;
 }
 
-/* ROW LAYOUT FOR DISCORD & INSTAGRAM BUTTONS */
+/* ROW LAYOUT FOR BUTTONS */
 .btn-row {
     display: flex;
     gap: 15px;
@@ -89,11 +90,11 @@ body {
     border-radius: 12px;
     text-align: center;
     transition: 0.3s;
-    backdrop-filter: blur(10px);  /* Glass Effect */
-    background: rgba(255, 255, 255, 0.2);  /* Semi-transparent White */
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    flex: 1;  /* Make buttons equal width */
+    flex: 1;
 }
 
 /* DISCORD BUTTON */
@@ -108,7 +109,7 @@ body {
 
 /* FULL INTRODUCTION BUTTON */
 .full-intro {
-    width: 100%;  /* Full Width */
+    width: 100%;
     background: rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
@@ -116,4 +117,9 @@ body {
 /* BUTTON HOVER EFFECT */
 .btn:hover {
     opacity: 0.8;
+}
+
+/* Show content when tapped */
+.show-content {
+    display: flex !important;
 }
