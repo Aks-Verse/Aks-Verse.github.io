@@ -59,38 +59,58 @@ body {
     margin-bottom: 20px;
 }
 
-/* Buttons Container */
+/* BUTTON CONTAINER: Two buttons in one row */
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
 }
 
-/* Buttons Styling */
+/* ROW LAYOUT FOR DISCORD & INSTAGRAM BUTTONS */
+.btn-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+/* GENERAL BUTTON STYLES */
 .btn {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     color: white;
     padding: 15px 40px;
-    border-radius: 8px;
+    border-radius: 12px;
     text-align: center;
     transition: 0.3s;
+    backdrop-filter: blur(10px);  /* Glass Effect */
+    background: rgba(255, 255, 255, 0.2);  /* Semi-transparent White */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex: 1;  /* Make buttons equal width */
 }
 
+/* DISCORD BUTTON */
 .discord {
-    background: #5865F2;
+    background: rgba(88, 101, 242, 0.3);
 }
 
+/* INSTAGRAM BUTTON */
 .instagram {
-    background: #E1306C;
+    background: rgba(225, 48, 108, 0.3);
 }
 
+/* FULL INTRODUCTION BUTTON */
 .full-intro {
-    background: #000;
-    border: 2px solid white;
+    width: 100%;  /* Full Width */
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
+/* BUTTON HOVER EFFECT */
 .btn:hover {
     opacity: 0.8;
 }
