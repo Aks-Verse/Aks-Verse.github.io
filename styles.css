@@ -6,12 +6,15 @@
     font-family: Arial, sans-serif;
 }
 
-/* Full screen background */
+/* Fullscreen Background */
 html, body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Background Video */
@@ -19,104 +22,60 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
 }
 
-/* Tap Screen */
-#tap-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
+/* Centered Content */
+.container {
+    position: relative;
+    text-align: center;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
+}
+
+/* Title */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Buttons */
+button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    z-index: 2;
-}
-
-/* Overlay Content */
-.overlay {
-    display: none; /* Hidden until tap */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 1;
-}
-
-/* Overlay Image */
-#overlay-image {
-    width: 250px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* BUTTON CONTAINER */
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    width: 90%;
-    max-width: 400px;
-}
-
-/* ROW LAYOUT FOR DISCORD & INSTAGRAM BUTTONS */
-.btn-row {
-    display: flex;
-    gap: 15px;
-    width: 100%;
-}
-
-/* GENERAL BUTTON STYLES */
-.btn {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    padding: 15px 40px;
-    border-radius: 12px;
-    text-align: center;
     transition: 0.3s;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    flex: 1;
 }
 
-/* DISCORD BUTTON */
-.discord {
-    background: rgba(88, 101, 242, 0.3);
+button:hover {
+    transform: scale(1.05);
 }
 
-/* INSTAGRAM BUTTON */
-.instagram {
-    background: rgba(225, 48, 108, 0.3);
+/* Individual Button Styles */
+.discord-btn {
+    background: #2c2f33;
+    color: white;
 }
 
-/* FULL INTRODUCTION BUTTON */
-.full-intro {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+.instagram-btn {
+    background: #8a1f41;
+    color: white;
 }
 
-/* BUTTON HOVER EFFECT */
-.btn:hover {
-    opacity: 0.8;
+.full-intro-btn {
+    background: white;
+    color: black;
+    font-size: 1.3rem;
+    padding: 20px;
 }
