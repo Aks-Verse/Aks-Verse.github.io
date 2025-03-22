@@ -8,34 +8,26 @@
 </head>
 <body>
 
-    <!-- Intro Video -->
+    <!-- Intro Screen -->
     <div id="intro">
-        <video autoplay muted playsinline id="introVideo">
-            <source src="assets/background.mp4" type="video/mp4">
-        </video>
+        <h1 class="glow">AKHIL</h1>
     </div>
 
     <!-- Tap to Continue Screen -->
-    <div id="tapScreen" class="hidden">
-        <div class="tap-text">Tap to Continue</div>
+    <div id="tapScreen">
+        <h2 class="glow">Tap to Continue</h2>
     </div>
 
     <!-- Main Page -->
-    <div id="mainPage" class="hidden">
-        <video autoplay muted loop class="bg-video">
-            <source src="assets/background.mp4" type="video/mp4">
+    <div id="mainPage">
+        <video autoplay loop muted id="bgVideo">
+            <source src="assets/bg.mp4" type="video/mp4">
         </video>
-        <div class="content">
-            <h1 class="title">AKHIL</h1>
-            <div class="social-buttons">
-                <button class="social-btn">
-                    <img src="assets/discord.png" alt="Discord"> Discord
-                </button>
-                <button class="social-btn">
-                    <img src="assets/instagram.png" alt="Instagram"> Instagram
-                </button>
-                <button class="full-intro">Full Introduction</button>
-            </div>
+        <h1 class="glow">AKHIL</h1>
+        <div class="buttons">
+            <a href="#" class="discord">Discord</a>
+            <a href="#" class="instagram">Instagram</a>
+            <a href="#" class="full-intro">Full Introduction</a>
         </div>
     </div>
 
