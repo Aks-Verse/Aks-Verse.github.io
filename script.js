@@ -1,23 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const intro = document.getElementById("intro");
-    const tapScreen = document.getElementById("tapScreen");
-    const mainPage = document.getElementById("mainPage");
+    const introScreen = document.getElementById("intro-screen");
+    const tapScreen = document.getElementById("tap-screen");
+    const mainPage = document.getElementById("main-page");
+    const introVideo = document.getElementById("intro-video");
 
-    // Step 1: Show Intro for 3 Seconds
-    setTimeout(() => {
-        intro.style.opacity = "0";
-        setTimeout(() => {
-            intro.style.display = "none";
-            tapScreen.style.display = "flex"; // Show Tap Screen
-        }, 500);
-    }, 3000);
+    // When Intro Video Ends, Show Tap Screen
+    introVideo.addEventListener("ended", function() {
+        introScreen.style.display = "none";
+        tapScreen.style.display = "flex";
+    });
 
-    // Step 2: Tap to Continue
+    // On Tap, Show Main Page
     tapScreen.addEventListener("click", function() {
-        tapScreen.style.opacity = "0";
-        setTimeout(() => {
-            tapScreen.style.display = "none";
-            mainPage.style.display = "block"; // Show Main Page
-        }, 500);
+        tapScreen.style.display = "none";
+        mainPage.style.display = "block";
     });
 });
