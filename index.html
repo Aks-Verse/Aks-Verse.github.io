@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aks-Verse</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- Intro Video -->
-    <div class="intro">
-        <video src="assets/intro.mp4" autoplay muted playsinline></video>
+    <div id="intro">
+        <video autoplay muted playsinline id="introVideo">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
     </div>
 
-    <!-- Tap Screen -->
-    <div class="tap-screen">
-        <p class="tap-text">Tap to Continue</p>
+    <!-- Tap to Continue Screen -->
+    <div id="tapScreen" class="hidden">
+        <div class="tap-text">Tap to Continue</div>
     </div>
 
     <!-- Main Page -->
-    <div class="main hidden">
-        <video class="bg-video" src="assets/background.mp4" autoplay muted loop playsinline></video>
-        <div class="overlay"></div>
-        <h1 class="title">AKHIL</h1>
-
-        <div class="buttons">
-            <a href="https://discord.com" class="btn discord"><img src="assets/discord.png"> Discord</a>
-            <a href="https://instagram.com" class="btn instagram"><img src="assets/instagram.png"> Instagram</a>
+    <div id="mainPage" class="hidden">
+        <video autoplay muted loop class="bg-video">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1 class="title">AKHIL</h1>
+            <div class="social-buttons">
+                <button class="social-btn">
+                    <img src="assets/discord.png" alt="Discord"> Discord
+                </button>
+                <button class="social-btn">
+                    <img src="assets/instagram.png" alt="Instagram"> Instagram
+                </button>
+                <button class="full-intro">Full Introduction</button>
+            </div>
         </div>
-        <a href="#" class="btn full-intro">Full Introduction</a>
     </div>
 
     <script src="script.js"></script>
