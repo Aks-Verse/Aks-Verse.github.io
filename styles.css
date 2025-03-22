@@ -10,6 +10,7 @@ body {
     background: black;
     color: white;
     text-align: center;
+    overflow: hidden;
 }
 
 /* Glow Effect */
@@ -19,39 +20,32 @@ body {
     text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
 }
 
-/* Intro Screen */
-#intro {
+/* Full-Screen Sections */
+#intro, #tapScreen, #mainPage {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Intro Screen */
+#intro {
     background: black;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 /* Tap Screen */
 #tapScreen {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
     background: black;
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: none;
 }
 
 /* Main Page */
 #mainPage {
-    display: none;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
     background: black;
+    display: none;
 }
 
 /* Background Video */
