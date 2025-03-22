@@ -4,47 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aks-Verse</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Intro Video -->
-    <div id="intro-screen">
-        <video id="intro-video" autoplay muted>
-            <source src="assets/intro.mp4" type="video/mp4">
-        </video>
+    <div class="intro">
+        <video src="assets/intro.mp4" autoplay muted playsinline></video>
     </div>
 
-    <!-- Tap to Continue Screen -->
-    <div id="tap-screen" onclick="enterSite()">
-        <h1>Tap to Continue</h1>
+    <!-- Tap Screen -->
+    <div class="tap-screen">
+        <p class="tap-text">Tap to Continue</p>
     </div>
 
     <!-- Main Page -->
-    <div id="main-content" class="hidden">
-        <!-- Background Video -->
-        <video id="bg-video" autoplay muted loop>
-            <source src="assets/background.mp4" type="video/mp4">
-        </video>
+    <div class="main hidden">
+        <video class="bg-video" src="assets/background.mp4" autoplay muted loop playsinline></video>
+        <div class="overlay"></div>
+        <h1 class="title">AKHIL</h1>
 
-        <!-- Overlay Image -->
-        <img id="overlay-image" src="assets/overlay.png" alt="Overlay">
-
-        <!-- Buttons -->
-        <div class="button-container">
-            <a href="https://discord.com" class="btn discord">
-                <img src="assets/discord-logo.png" alt="Discord"> Discord
-            </a>
-            <a href="https://instagram.com" class="btn instagram">
-                <img src="assets/instagram-logo.png" alt="Instagram"> Instagram
-            </a>
+        <div class="buttons">
+            <a href="https://discord.com" class="btn discord"><img src="assets/discord.png"> Discord</a>
+            <a href="https://instagram.com" class="btn instagram"><img src="assets/instagram.png"> Instagram</a>
         </div>
-
         <a href="#" class="btn full-intro">Full Introduction</a>
     </div>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
-
 </body>
 </html>
