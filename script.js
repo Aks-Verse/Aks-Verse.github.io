@@ -1,20 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const tapScreen = document.querySelector(".tap-screen");
-    const mainPage = document.querySelector(".main");
-    const introVideo = document.querySelector(".intro");
+document.addEventListener("DOMContentLoaded", function() {
+    const introVideo = document.getElementById("introVideo");
+    const introScreen = document.getElementById("intro");
+    const tapScreen = document.getElementById("tapScreen");
+    const mainPage = document.getElementById("mainPage");
 
-    setTimeout(() => {
-        introVideo.style.opacity = "0";
-        setTimeout(() => {
-            introVideo.style.display = "none";
-        }, 500);
-    }, 3000);
+    // Hide intro and show tap screen after video
+    introVideo.onended = function() {
+        introScreen.style.display = "none";
+        tapScreen.classList.remove("hidden");
+    };
 
-    tapScreen.addEventListener("click", () => {
-        tapScreen.style.opacity = "0";
-        setTimeout(() => {
-            tapScreen.style.display = "none";
-            mainPage.classList.remove("hidden");
-        }, 500);
+    // Click to continue
+    tapScreen.addEventListener("click", function() {
+        tapScreen.style.display = "none";
+        mainPage.classList.remove("hidden");
     });
 });
