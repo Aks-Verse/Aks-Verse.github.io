@@ -1,16 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let introVideo = document.getElementById("intro-video");
-    let introScreen = document.getElementById("intro-screen");
-    let tapScreen = document.getElementById("tap-screen");
+document.addEventListener("DOMContentLoaded", () => {
+    const tapScreen = document.querySelector(".tap-screen");
+    const mainPage = document.querySelector(".main");
+    const introVideo = document.querySelector(".intro");
 
-    // Intro Video Ends → Show Tap to Continue
-    introVideo.onended = function () {
-        introScreen.style.display = "none";
-        tapScreen.style.display = "flex";
-    };
+    setTimeout(() => {
+        introVideo.style.opacity = "0";
+        setTimeout(() => {
+            introVideo.style.display = "none";
+        }, 500);
+    }, 3000);
+
+    tapScreen.addEventListener("click", () => {
+        tapScreen.style.opacity = "0";
+        setTimeout(() => {
+            tapScreen.style.display = "none";
+            mainPage.classList.remove("hidden");
+        }, 500);
+    });
 });
-
-function enterSite() {
-    document.getElementById("tap-screen").style.display = "none";
-    document.getElementById("main-content").classList.remove("hidden");
-}
