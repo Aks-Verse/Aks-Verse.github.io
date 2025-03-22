@@ -1,135 +1,95 @@
-/* Reset Styles */
-* {
+/* General Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
-
-/* Fullscreen Setup */
-html, body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
     background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white;
+    text-align: center;
 }
 
 /* Intro Video */
-#intro-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    z-index: 10;
-}
-
-#intro-video {
-    width: 100%;
-    height: 100%;
+.intro video {
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
 }
 
 /* Tap Screen */
-#tap-screen {
+.tap-screen {
     position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 5;
-    display: none;
-    text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff;
-}
-
-/* Hide Main Content Initially */
-.hidden {
-    display: none;
-}
-
-/* Background Video */
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    cursor: pointer;
+}
+.tap-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+/* Main Page */
+.hidden { display: none; }
+.main {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+.bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
 }
-
-/* Overlay Image */
-#overlay-image {
+.overlay {
     position: absolute;
-    top: 10%;
-    width: 300px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
 }
-
-/* Buttons Container */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    position: absolute;
-    bottom: 15%;
+.title {
+    font-size: 3rem;
+    margin-top: 10vh;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
 }
 
 /* Buttons */
+.buttons {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
 .btn {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 8px;
     padding: 12px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
     text-decoration: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
     color: white;
     transition: 0.3s;
-    width: 150px;
-    backdrop-filter: blur(10px);  /* Glassmorphism */
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-/* Add Logos */
 .btn img {
     width: 20px;
-    height: 20px;
-    margin-right: 8px;
 }
-
-/* Discord Button */
-.discord {
-    background-color: rgba(88, 101, 242, 0.3);
-}
-
-/* Instagram Button */
-.instagram {
-    background-color: rgba(228, 64, 95, 0.3);
-}
-
-/* Full Introduction Button */
+.discord { background: #5865F2; }
+.instagram { background: #C13584; }
 .full-intro {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: black;
-    width: 320px;
-    padding: 15px;
-    font-size: 20px;
-    font-weight: bold;
     position: absolute;
-    bottom: 5%;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
 }
