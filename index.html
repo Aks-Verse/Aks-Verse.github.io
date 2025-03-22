@@ -8,29 +8,32 @@
 </head>
 <body>
 
-    <!-- Intro Screen -->
-    <div id="intro">
-        <h1 class="glow">AKHIL</h1>
-    </div>
-
-    <!-- Tap to Continue Screen -->
-    <div id="tapScreen">
-        <h2 class="glow">Tap to Continue</h2>
-    </div>
-
-    <!-- Main Page -->
-    <div id="mainPage">
-        <video autoplay loop muted id="bgVideo">
-            <source src="assets/bg.mp4" type="video/mp4">
+    <!-- INTRO SCREEN -->
+    <div id="intro-screen">
+        <video id="intro-video" autoplay muted>
+            <source src="assets/intro.mp4" type="video/mp4">
         </video>
-        <h1 class="glow">AKHIL</h1>
+    </div>
+
+    <!-- TAP SCREEN -->
+    <div id="tap-screen">
+        <h1 class="glow">Tap to Continue</h1>
+    </div>
+
+    <!-- MAIN PAGE -->
+    <div id="main-page">
+        <video id="bg-video" autoplay loop muted>
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <h1 class="title">AKHIL</h1>
         <div class="buttons">
-            <a href="#" class="discord">Discord</a>
-            <a href="#" class="instagram">Instagram</a>
-            <a href="#" class="full-intro">Full Introduction</a>
+            <a href="#" class="btn discord"><img src="assets/discord.png"> Discord</a>
+            <a href="#" class="btn instagram"><img src="assets/instagram.png"> Instagram</a>
+            <a href="#" class="btn full-intro">Full Introduction</a>
         </div>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
