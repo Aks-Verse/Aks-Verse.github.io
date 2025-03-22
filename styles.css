@@ -1,30 +1,49 @@
-/* General Styles */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Full screen background */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+    color: white;
     font-family: Arial, sans-serif;
 }
 
-html, body {
+/* Tap Screen */
+#tap-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-}
-
-/* Main Container */
-.container {
-    width: 100vw;
-    height: 100vh;
+    background: black;
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: relative;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* Background */
+/* Hide Main Content Initially */
+#main-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Background Video */
 #bg-video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -33,49 +52,65 @@ html, body {
     z-index: -1;
 }
 
-/* Content Wrapper */
-.content {
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
+/* Overlay Image */
+#overlay {
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-/* Buttons */
+/* BUTTON CONTAINER: Two buttons in one row */
 .buttons {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
-    margin-top: 20px;
-}
-
-.btn {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 12px 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* ROW LAYOUT FOR DISCORD & INSTAGRAM BUTTONS */
+.btn-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+/* GENERAL BUTTON STYLES */
+.btn {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: bold;
-    border-radius: 10px;
     color: white;
-    width: 80%;
-    max-width: 300px;
+    padding: 15px 40px;
+    border-radius: 12px;
     text-align: center;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);  /* Glass Effect */
+    background: rgba(255, 255, 255, 0.2);  /* Semi-transparent White */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex: 1;  /* Make buttons equal width */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .btn {
-        font-size: 0.9rem;
-        padding: 10px 15px;
-    }
+/* DISCORD BUTTON */
+.discord {
+    background: rgba(88, 101, 242, 0.3);
 }
 
-@media (max-width: 480px) {
-    .btn {
-        font-size: 0.8rem;
-        padding: 8px 12px;
-    }
+/* INSTAGRAM BUTTON */
+.instagram {
+    background: rgba(225, 48, 108, 0.3);
+}
+
+/* FULL INTRODUCTION BUTTON */
+.full-intro {
+    width: 100%;  /* Full Width */
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* BUTTON HOVER EFFECT */
+.btn:hover {
+    opacity: 0.8;
 }
