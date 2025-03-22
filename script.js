@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const mainPage = document.getElementById("main-page");
     const introVideo = document.getElementById("intro-video");
 
-    // When Intro Video Ends, Show Tap Screen
+    // Intro Video Ends → Show Tap Screen
     introVideo.addEventListener("ended", function() {
         introScreen.style.display = "none";
         tapScreen.style.display = "flex";
     });
 
-    // On Tap, Show Main Page
+    // Tap to Continue → Show Main Page
     tapScreen.addEventListener("click", function() {
         tapScreen.style.display = "none";
         mainPage.style.display = "block";
